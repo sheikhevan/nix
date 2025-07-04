@@ -18,9 +18,11 @@ with lib; {
   };
   config = mkIf config.evan.programs.nvf.everforest.enable {
     environment.systemPackages = with pkgs; [
+      wl-clipboard
       stylua
       alejandra
       prettierd
+      ruff
     ];
     programs.nvf = {
       enable = true;
@@ -181,7 +183,7 @@ with lib; {
                 ts = [
                   "prettierd"
                 ];
-                react = [
+                tsx = [
                   "prettierd"
                 ];
                 svelte = [
@@ -192,6 +194,9 @@ with lib; {
                 ];
                 json = [
                   "prettierd"
+                ];
+                python = [
+                  "ruff"
                 ];
               };
             };
@@ -240,6 +245,18 @@ with lib; {
             tailwind = {
               enable = true;
               lsp.enable = true;
+            };
+            markdown = {
+              enable = true;
+              lsp.enable = true;
+            };
+            python = {
+              enable = true;
+              lsp.enable = true;
+              format = {
+                enable = true;
+                type = "ruff";
+              };
             };
           };
         };

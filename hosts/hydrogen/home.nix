@@ -88,6 +88,7 @@
 
     nodejs
     bun
+    flyctl
 
     yazi
 

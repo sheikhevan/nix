@@ -80,6 +80,7 @@
     swayidle
     wbg
     waylock
+    texliveMedium
     (import ../../scripts/lock-screen.nix {inherit pkgs;})
   ];
 
