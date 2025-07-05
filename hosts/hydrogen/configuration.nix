@@ -21,6 +21,7 @@
     ../../modules/nixos/services/pipewire
     ../../modules/nixos/services/bluetooth
     ../../modules/nixos/services/mullvad
+    ../../modules/nixos/windowManagers/dwl
     ../../modules/nixos/programs/gnupg
     ../../modules/nixos/programs/ssh
     ../../modules/nixos/programs/nvf
@@ -29,10 +30,6 @@
     ../../modules/nixos/fonts/noto
   ];
   evan.nix.enable = true;
-
-  nixpkgs.overlays = [
-    (import ../../overlays/dwl)
-  ];
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
@@ -63,6 +60,8 @@
   evan.services.bluetooth.enable = true;
   evan.services.mullvad.enable = true;
 
+  evan.windowManagers.dwl.enable = true;
+
   evan.programs.gnupg.enable = true;
   evan.programs.ssh.enable = true;
   evan.programs.nvf.everforest.enable = true;
@@ -71,17 +70,8 @@
   evan.fonts.iosevka.enable = true;
   evan.fonts.noto.enable = true;
 
-  security.pam.services.waylock = {};
-  services.logrotate.checkConfig = false;
-
   environment.systemPackages = with pkgs; [
-    dwl
-    wmenu
-    swayidle
-    wbg
-    waylock
     texliveMedium
-    (import ../../scripts/lock-screen.nix {inherit pkgs;})
   ];
 
   # Copy the NixOS configuration file and link it from the resulting system

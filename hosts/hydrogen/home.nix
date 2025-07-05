@@ -9,7 +9,7 @@
     ../../modules/homeManager/programs/foot
     ../../modules/homeManager/programs/zathura
     ../../modules/homeManager/programs/mpv
-    ../../modules/homeManager/programs/newsboat
+    ../../modules/homeManager/programs/newsraft
     ../../modules/homeManager/theme/gtk
     ../../modules/homeManager/xdg
   ];
@@ -90,7 +90,7 @@
     bun
     flyctl
 
-    yazi
+    xplr
 
     obsidian
 
@@ -106,7 +106,7 @@
   evan.programs.foot.everforest.enable = true;
   evan.programs.mpv.enable = true;
   evan.programs.zathura.everforest.enable = true;
-  evan.programs.newsboat.enable = true;
+  evan.programs.newsraft.enable = true;
 
   evan.gtk.everforest.enable = true;
 

@@ -20,7 +20,6 @@ final: prev: {
         prev.libdrm
         prev.fcft
         prev.pixman
-        prev.swayidle
       ];
   });
 }

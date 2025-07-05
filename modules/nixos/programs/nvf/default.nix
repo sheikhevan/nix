@@ -146,6 +146,22 @@ with lib; {
             };
           };
 
+          notes.obsidian = {
+            enable = true;
+            setupOpts = {
+              workspaces = [
+                {
+                  name = "polymath";
+                  path = "~/documents/obsidian/polymath";
+                }
+              ];
+
+              completion = {
+                nvim_cmp = true;
+              };
+            };
+          };
+
           statusline.lualine.enable = true;
           telescope = {
             enable = true;

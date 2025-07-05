@@ -28,9 +28,9 @@ with lib; {
     gtk = {
       enable = true;
       cursorTheme = {
-        package = pkgs.apple-cursor;
-        name = "macOS";
-        size = 32;
+        package = pkgs.adwaita-icon-theme;
+        name = "Adwaita";
+        size = 24;
       };
       font = {
         package = pkgs.noto-fonts;
