@@ -90,6 +90,8 @@
     bun
     flyctl
 
+    obs-studio
+
     xplr
 
     obsidian

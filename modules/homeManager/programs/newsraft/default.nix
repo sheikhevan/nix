@@ -20,6 +20,11 @@ with lib; {
     home.packages = with pkgs; [
       newsraft
     ];
+
+    home.file.".config/newsraft/config".text = ''
+      bind o exec zen "%l"
+      bind m exec mpv "%l"
+    '';
     home.file.".config/newsraft/feeds".text = ''
       @ News
       https://www.kxan.com/feed/ "KXAN Austin"
