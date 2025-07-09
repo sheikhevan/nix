@@ -90,9 +90,11 @@
     bun
     flyctl
 
-    obs-studio
+    electrum
+    electrum-ltc
+    monero-gui
 
-    xplr
+    lf
 
     obsidian
 

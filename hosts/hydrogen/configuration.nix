@@ -21,6 +21,7 @@
     ../../modules/nixos/services/pipewire
     ../../modules/nixos/services/bluetooth
     ../../modules/nixos/services/mullvad
+    ../../modules/nixos/services/trezord
     ../../modules/nixos/windowManagers/dwl
     ../../modules/nixos/programs/gnupg
     ../../modules/nixos/programs/ssh
@@ -59,6 +60,7 @@
   evan.services.pipewire.enable = true;
   evan.services.bluetooth.enable = true;
   evan.services.mullvad.enable = true;
+  evan.services.trezord.enable = true;
 
   evan.windowManagers.dwl.enable = true;
 
