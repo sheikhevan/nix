@@ -22,11 +22,13 @@
     ../../modules/nixos/services/bluetooth
     ../../modules/nixos/services/mullvad
     ../../modules/nixos/services/trezord
+    ../../modules/nixos/services/greetd
     ../../modules/nixos/windowManagers/dwl
     ../../modules/nixos/programs/gnupg
     ../../modules/nixos/programs/ssh
     ../../modules/nixos/programs/nvf
     ../../modules/nixos/programs/dconf
+    ../../modules/nixos/programs/slstatus
     ../../modules/nixos/fonts/iosevka
     ../../modules/nixos/fonts/noto
   ];
@@ -61,20 +63,18 @@
   evan.services.bluetooth.enable = true;
   evan.services.mullvad.enable = true;
   evan.services.trezord.enable = true;
+  evan.services.greetd.enable = true;
 
   evan.windowManagers.dwl.enable = true;
 
   evan.programs.gnupg.enable = true;
   evan.programs.ssh.enable = true;
-  evan.programs.nvf.everforest.enable = true;
+  evan.programs.nvf.e-ink.enable = true;
   evan.programs.dconf.enable = true;
+  evan.programs.slstatus.enable = true;
 
   evan.fonts.iosevka.enable = true;
   evan.fonts.noto.enable = true;
-
-  environment.systemPackages = with pkgs; [
-    texliveMedium
-  ];
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you

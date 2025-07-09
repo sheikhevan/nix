@@ -7,16 +7,16 @@
 with lib; {
   options = {
     evan.programs.foot = {
-      everforest.enable = mkOption {
+      e-ink.enable = mkOption {
         type = types.bool;
         default = true;
         description = ''
-          Enable 'foot' with the 'everforest' rice?
+          Enable 'foot' with the 'e-ink' rice?
         '';
       };
     };
   };
-  config = mkIf config.evan.programs.foot.everforest.enable {
+  config = mkIf config.evan.programs.foot.e-ink.enable {
     programs.foot = {
       enable = true;
       settings = {
@@ -29,26 +29,28 @@ with lib; {
         };
         colors = {
           alpha = "1.0";
-          background = "2b3339";
-          foreground = "d3c6aa";
+          background = "CCCCCC";
+          foreground = "474747";
+          selection-background = "AEAEAE";
+          selection-foreground = "474747";
 
-          regular0 = "4b565c";
-          regular1 = "e67e80";
-          regular2 = "a7c080";
-          regular3 = "dbbc7f";
-          regular4 = "7fbbb3";
-          regular5 = "d699b6";
-          regular6 = "83c092";
-          regular7 = "d3c6aa";
+          regular0 = "CCCCCC";
+          regular1 = "333333";
+          regular2 = "9A9A9A";
+          regular3 = "868686";
+          regular4 = "727272";
+          regular5 = "AEAEAE";
+          regular6 = "4A4A4A";
+          regular7 = "5E5E5E";
 
-          bright0 = "4b565c";
-          bright1 = "e67e80";
-          bright2 = "a7c080";
-          bright3 = "dbbc7f";
-          bright4 = "7fbbb3";
-          bright5 = "d699b6";
-          bright6 = "83c092";
-          bright7 = "d3c6aa";
+          bright0 = "5E5E5E";
+          bright1 = "333333";
+          bright2 = "9A9A9A";
+          bright3 = "868686";
+          bright4 = "727272";
+          bright5 = "AEAEAE";
+          bright6 = "4A4A4A";
+          bright7 = "7C7C7C";
         };
       };
     };

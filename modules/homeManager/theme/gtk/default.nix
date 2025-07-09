@@ -7,21 +7,21 @@
 with lib; {
   options = {
     evan.gtk = {
-      everforest.enable = mkOption {
+      e-ink.enable = mkOption {
         type = types.bool;
         default = true;
         description = ''
-          Enable gtk with the everforest theme? (note: currently I am just using adwaita-dark)
+          Enable gtk with the e-ink theme? (note: currently I am just using adwaita-light)
         '';
       };
     };
   };
-  config = mkIf config.evan.gtk.everforest.enable {
+  config = mkIf config.evan.gtk.e-ink.enable {
     dconf = {
       enable = true;
       settings = {
         "org/gnome/desktop/interface" = {
-          color-scheme = "prefer-dark";
+          color-scheme = "prefer-light";
         };
       };
     };
@@ -39,7 +39,7 @@ with lib; {
       };
       theme = {
         package = pkgs.gnome-themes-extra;
-        name = "Adwaita-dark";
+        name = "Adwaita-light";
       };
     };
   };

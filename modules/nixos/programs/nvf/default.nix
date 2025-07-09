@@ -7,22 +7,24 @@
 with lib; {
   options = {
     evan.programs.nvf = {
-      everforest.enable = mkOption {
+      e-ink.enable = mkOption {
         type = types.bool;
         default = true;
         description = ''
-          Enable 'nvf' with the 'everforest' rice?
+          Enable 'nvf' with the 'e-ink' rice?
         '';
       };
     };
   };
-  config = mkIf config.evan.programs.nvf.everforest.enable {
+  config = mkIf config.evan.programs.nvf.e-ink.enable {
     environment.systemPackages = with pkgs; [
       wl-clipboard
       stylua
       alejandra
       prettierd
       ruff
+      clang
+      clang-tools
     ];
     programs.nvf = {
       enable = true;
@@ -81,10 +83,20 @@ with lib; {
           };
 
           extraPlugins = {
-            everforest = {
-              package = pkgs.vimPlugins.everforest;
+            e-ink = {
+              package = pkgs.vimUtils.buildVimPlugin {
+                name = "e-ink";
+                src = pkgs.fetchFromGitHub {
+                  owner = "e-ink-colorscheme";
+                  repo = "e-ink.nvim";
+                  rev = "0f9131236ef0f443144d5545db02fa726f80bbd3";
+                  sha256 = "sha256-3kw9CiJoIigVh/kjTeyR9uqpDoJa1HqRxG41ir8wgR0=";
+                };
+              };
               setup = ''
-                vim.cmd([[colorscheme everforest]])
+                require("e-ink").setup()
+                vim.cmd.colorscheme "e-ink"
+                vim.opt.background = "light"
               '';
             };
           };
@@ -214,6 +226,12 @@ with lib; {
                 python = [
                   "ruff"
                 ];
+                c = [
+                  "clangd"
+                ];
+                cpp = [
+                  "clangd"
+                ];
               };
             };
           };
@@ -273,6 +291,10 @@ with lib; {
                 enable = true;
                 type = "ruff";
               };
+            };
+            clang = {
+              enable = true;
+              lsp.enable = true;
             };
           };
         };

@@ -1,4 +1,4 @@
 {pkgs}:
 pkgs.writeShellScriptBin "lock-screen" ''
-  exec waylock -init-color 0x2b3339 -input-color 0xa7c080 -fail-color 0xe67e80
+  exec waylock -init-color 0xCCCCCC -input-color 0x868686 -fail-color 0x333333
 ''

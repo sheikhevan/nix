@@ -107,12 +107,12 @@
   };
 
   evan.programs.git.enable = true;
-  evan.programs.foot.everforest.enable = true;
+  evan.programs.foot.e-ink.enable = true;
   evan.programs.mpv.enable = true;
-  evan.programs.zathura.everforest.enable = true;
+  evan.programs.zathura.e-ink.enable = true;
   evan.programs.newsraft.enable = true;
 
-  evan.gtk.everforest.enable = true;
+  evan.gtk.e-ink.enable = true;
 
   evan.xdg.lowercaseDirs.enable = true;
 

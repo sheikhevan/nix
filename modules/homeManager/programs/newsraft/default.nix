@@ -54,6 +54,8 @@ with lib; {
       @ YouTube
       https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "Luke Smith"
       https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA "Mental Outlaw"
+      https://www.youtube.com/feeds/videos.xml?channel_id=UCcaTUtGzOiS4cqrgtcsHYWg "jvscholz"
+      https://www.youtube.com/feeds/videos.xml?channel_id=UCQjBsscIa_mgEnSvWpm_9vw "Odysseas"
       https://www.youtube.com/feeds/videos.xml?channel_id=UC0dbzuSRwNiZXfWK05epKUQ "Lord Miles"
 
       @ Misc

@@ -7,51 +7,37 @@
 with lib; {
   options = {
     evan.programs.zathura = {
-      everforest.enable = mkOption {
+      e-ink.enable = mkOption {
         type = types.bool;
         default = true;
         description = ''
-          Enable 'zathura' with the 'everforest' rice?
+          Enable 'zathura' with the 'e-ink' rice?
         '';
       };
     };
   };
-  config = mkIf config.evan.programs.zathura.everforest.enable {
+  config = mkIf config.evan.programs.zathura.e-ink.enable {
     programs.zathura = {
       enable = true;
       extraConfig = ''
-        set default-bg                  "#4b565c"
-        set default-fg                  "#d3c6aa"
-
-        set statusbar-fg                "#d3c6aa"
-        set statusbar-bg                "#2b3339"
-
-        set inputbar-bg                 "#2b3339"
-        set inputbar-fg                 "#d3c6aa"
-
-        set notification-bg             "#2b3339"
-        set notification-fg             "#d3c6aa"
-
-        set notification-error-bg       "#2b3339"
-        set notification-error-fg       "#d3c6aa"
-
-        set notification-warning-bg     "#2b3339"
-        set notification-warning-fg     "#d3c6aa"
-
-        set highlight-color             "#4b565c"
-        set highlight-active-color      "#e67e80"
-
-        set completion-bg               "#2b3339"
-        set completion-fg               "#d3c6aa"
-
-        set completion-highlight-fg     "#4b565c"
-        set completion-highlight-bg     "#2b3339"
-
-        set recolor-lightcolor          "#2b3339"
-        set recolor-darkcolor           "#d3c6aa"
-
-        set recolor                     "false"
-        set recolor-keephue             "false"
+        set default-bg                  "#CCCCCC"
+        set default-fg                  "#474747"
+        set statusbar-fg                "#474747"
+        set statusbar-bg                "#AEAEAE"
+        set inputbar-bg                 "#AEAEAE"
+        set inputbar-fg                 "#474747"
+        set notification-bg             "#AEAEAE"
+        set notification-fg             "#474747"
+        set notification-error-bg       "#AEAEAE"
+        set notification-error-fg       "#333333"
+        set notification-warning-bg     "#AEAEAE"
+        set notification-warning-fg     "#5E5E5E"
+        set highlight-color             "#9A9A9A"
+        set highlight-active-color      "#4A4A4A"
+        set completion-bg               "#AEAEAE"
+        set completion-fg               "#474747"
+        set completion-highlight-fg     "#CCCCCC"
+        set completion-highlight-bg     "#5E5E5E"
       '';
     };
   };

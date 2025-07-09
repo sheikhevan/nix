@@ -29,6 +29,7 @@ with lib; {
       brightnessctl
       waylock
       (import ../../../../scripts/lock-screen.nix {inherit pkgs;})
+      (import ../../../../scripts/wpctl-get-volume-human.nix {inherit pkgs;})
     ];
 
     security.pam.services.waylock = {};
