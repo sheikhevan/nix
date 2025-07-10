@@ -82,6 +82,86 @@ with lib; {
             smoothscroll = true;
           };
 
+          keymaps = [
+            {
+              key = "<C-a>";
+              mode = "n";
+              silent = true;
+              action = "ggVG";
+              desc = "Select all text";
+            }
+            {
+              key = "<C-m>";
+              mode = "n";
+              silent = true;
+              action = "<C-i>";
+              desc = "Jumplist";
+            }
+            {
+              key = "te";
+              mode = "n";
+              silent = true;
+              action = ":tabedit<Return>";
+              desc = "New tab";
+            }
+            {
+              key = "<tab>";
+              mode = "n";
+              silent = true;
+              action = ":tabnext<Return>";
+              desc = "Next tab";
+            }
+            {
+              key = "<s-tab>";
+              mode = "n";
+              silent = true;
+              action = ":tabprev<Return>";
+              desc = "Previous tab";
+            }
+            {
+              key = "ss";
+              mode = "n";
+              silent = true;
+              action = ":split<Return>";
+              desc = "Split horizontal";
+            }
+            {
+              key = "sv";
+              mode = "n";
+              silent = true;
+              action = ":vsplit<Return>";
+              desc = "Split vertical";
+            }
+            {
+              key = "sh";
+              mode = "n";
+              silent = true;
+              action = "<C-w>h";
+              desc = "Go to left window";
+            }
+            {
+              key = "sk";
+              mode = "n";
+              silent = true;
+              action = "<C-w>k";
+              desc = "Go to up window";
+            }
+            {
+              key = "sj";
+              mode = "n";
+              silent = true;
+              action = "<C-w>j";
+              desc = "Go to down window";
+            }
+            {
+              key = "sl";
+              mode = "n";
+              silent = true;
+              action = "<C-w>l";
+              desc = "Go to right window";
+            }
+          ];
+
           extraPlugins = {
             e-ink = {
               package = pkgs.vimUtils.buildVimPlugin {

@@ -42,7 +42,6 @@
     mutagen
     tidal-dl
     transmission_4-gtk
-    libnatpmp
 
     zip
     xz
@@ -94,6 +93,7 @@
     electrum-ltc
     monero-gui
 
+    imv
     lf
 
     obsidian

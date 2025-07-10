@@ -28,10 +28,24 @@ with lib; {
       wbg
       brightnessctl
       waylock
+      grim
+      slurp
       (import ../../../../scripts/lock-screen.nix {inherit pkgs;})
       (import ../../../../scripts/wpctl-get-volume-human.nix {inherit pkgs;})
+      (import ../../../../scripts/screenshot-wl.nix {inherit pkgs;})
     ];
 
     security.pam.services.waylock = {};
+
+    xdg.portal = {
+      wlr.enable = true;
+      config = {
+        common = {
+          default = [
+            "wlr"
+          ];
+        };
+      };
+    };
   };
 }

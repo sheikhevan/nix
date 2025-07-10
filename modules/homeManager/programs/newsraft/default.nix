@@ -23,6 +23,7 @@ with lib; {
 
     home.file.".config/newsraft/config".text = ''
       bind o exec zen "%l"
+      bind i exec imv "%l"
       bind m exec mpv "%l"
     '';
     home.file.".config/newsraft/feeds".text = ''
